@@ -4,9 +4,11 @@ const{UserRouter}=require("./routes/User.route")
 const{ClassifiedRouter}=require("./routes/classfied.route")
 
 require("dotenv").config()
+let cors = require("cors");
+
 
 app=express()
-
+app.use(cors());
 app.use(express.json())
 app.use("",UserRouter)
 app.use("",ClassifiedRouter)
