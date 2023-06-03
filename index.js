@@ -1,11 +1,15 @@
 const express=require("express")
 const {connection}=require("./config/db")
+const{UserRouter}=require("./routes/User.route")
+const{ClassifiedRouter}=require("./routes/classfied.route")
 
 require("dotenv").config()
 
 app=express()
 
 app.use(express.json())
+app.use("",UserRouter)
+app.use("",ClassifiedRouter)
 
 app.get("/",(req,res)=>{
     res.send("HOME PAGE")
