@@ -2,6 +2,7 @@ const express=require("express")
 
 require("dotenv").config()
 
+
 const{ClassifiedModel}=require("../models/classified.model")
 
 const ClassifiedRouter=express.Router()
